@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Menu | Vibe Bistrot</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
@@ -13,8 +13,7 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>vibe</h1>
-                <span>bistrot</span>
+                <img src="vibe.PNG" alt="Vibe Bistrot" class="logo-img">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
@@ -33,9 +32,23 @@
             <p>Découvrez nos délicieuses créations</p>
         </div>
 
+        <!-- CATEGORY FILTER TABS -->
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">Tous</button>
+            <button class="tab-btn" data-category="entrees-froides">🥗 Entrées Froides</button>
+            <button class="tab-btn" data-category="entrees-chaudes">🔥 Entrées Chaudes</button>
+            <button class="tab-btn" data-category="poulet">🍗 Plats Poulet</button>
+            <button class="tab-btn" data-category="viandes">🥩 Plats Viandes</button>
+            <button class="tab-btn" data-category="burgers">🍔 Burgers</button>
+            <button class="tab-btn" data-category="sandwichs">🥪 Sandwichs</button>
+            <button class="tab-btn" data-category="pates">🍝 Pâtes</button>
+            <button class="tab-btn" data-category="boissons">🍹 Boissons</button>
+            <button class="tab-btn" data-category="desserts">🍰 Desserts</button>
+        </div>
+
         <div class="menu-container">
             <!-- ENTRÉES FROIDES -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="entrees-froides">
                 <h2 class="section-title"><span>🥗 ENTRÉES FROIDES</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Crudite%CC%81s.glb">
@@ -45,9 +58,12 @@
                         </div>
                         <p class="desc">Laitue, Tomates, Cerises, Oignons rouges, Olives noires, Maïs, Sauce vinaigrette</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Tono.glb">
@@ -57,9 +73,12 @@
                         </div>
                         <p class="desc">Thon, Crème mayonnaise, Cornichons, Tomates, Crème balsamique</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Ce%CC%81sar%20vibe.glb">
@@ -69,9 +88,12 @@
                         </div>
                         <p class="desc">Poulet crispy, Tomates cerises, Laitue, Croûtons, Sauce maison, Parmesan</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Capresse.glb">
@@ -81,9 +103,12 @@
                         </div>
                         <p class="desc">Tomate, Mozzarella, Sauce pesto, Basilic</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burrata%20Vibe.glb">
@@ -93,15 +118,18 @@
                         </div>
                         <p class="desc">Burrata, Laitue, Tomates cerises, Fruits secs, Fruits de saison, Sauce pesto au balsamic frais</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- ENTRÉES CHAUDES -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="entrees-chaudes">
                 <h2 class="section-title"><span>🔥 ENTRÉES CHAUDES</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20bourek.glb">
@@ -111,9 +139,12 @@
                         </div>
                         <p class="desc">Délicieux boureks maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item">
@@ -131,9 +162,12 @@
                         </div>
                         <p class="desc">Omelette préparée selon votre choix</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
@@ -143,9 +177,12 @@
                         </div>
                         <p class="desc">Gratin de poulet gratiné au fromage</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20camembert%20pane.glb">
@@ -155,9 +192,12 @@
                         </div>
                         <p class="desc">Camembert pané maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
@@ -167,15 +207,18 @@
                         </div>
                         <p class="desc">Gratin aux fruits de mer</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- PLATS POULET -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="poulet">
                 <h2 class="section-title"><span>🍗 PLATS – POULET</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20frenchy.glb">
@@ -185,9 +228,12 @@
                         </div>
                         <p class="desc">Suprême de poulet cuisiné façon cordon bleu</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20Jaintou.glb">
@@ -197,9 +243,12 @@
                         </div>
                         <p class="desc">Suprême de poulet mariné au curry, cuisine façon indienne</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chick%20Farci%20.glb">
@@ -209,9 +258,12 @@
                         </div>
                         <p class="desc">Poulet farci à la viande hachée et duxelle de champignons</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/1000%20et%20Une%20Escalope.glb">
@@ -221,9 +273,12 @@
                         </div>
                         <p class="desc">Suprême de poulet aux choix épices, pané ou à la crème</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Cuisse%20du%20Che%CC%81rif.glb">
@@ -233,15 +288,18 @@
                         </div>
                         <p class="desc">Cuisse désossée marinée grillée façon USA, nappée de sauce barbecue maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- PLATS VIANDES -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="viandes">
                 <h2 class="section-title"><span>🥩 LES PLATS VIANDES</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20Saute%CC%81.glb">
@@ -251,9 +309,12 @@
                         </div>
                         <p class="desc">Émincés de viande au jus corsé réduit et aux champignons frais</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item" id="maos-ribs-placeholder">
@@ -262,7 +323,6 @@
                             <span class="price">1950 DA</span>
                         </div>
                         <p class="desc">Médallions de veau grillés à la façon asiatique</p>
-                        <!-- Emplacement réservé pour le GLB de Mao's Ribs -->
                         <div class="glb-placeholder-note">🔜 Modèle 3D bientôt disponible</div>
                     </div>
 
@@ -273,9 +333,12 @@
                         </div>
                         <p class="desc">Jarret de veau fondant, nappé d'une sauce brune intense, accompagné de pommes de terre confites</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Grillades%20du%20Jour.glb">
@@ -285,15 +348,18 @@
                         </div>
                         <p class="desc">Grillades fraîches selon l'arrivage du jour</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- BURGERS -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="burgers">
                 <h2 class="section-title"><span>🍔 BURGERS</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chick%20chic.glb">
@@ -303,9 +369,12 @@
                         </div>
                         <p class="desc">Suprême de poulet mariné et grillé, sauce Chef Cat, laitue, tomate tranchée</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20elvis.glb">
@@ -315,9 +384,12 @@
                         </div>
                         <p class="desc">Steak haché, double cheese, sauce Presley, salade iceberg, tomate, pickles</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20forestier.glb">
@@ -327,9 +399,12 @@
                         </div>
                         <p class="desc">Steak haché, double cheese, champignons, pignons caramélisés</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item">
@@ -343,7 +418,7 @@
             </div>
 
             <!-- SANDWICHS -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="sandwichs">
                 <h2 class="section-title"><span>🥪 SANDWICHS</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Alpin.glb">
@@ -353,9 +428,12 @@
                         </div>
                         <p class="desc">Suprême de poulet grillé et caramélisé, sauce maison, frites, laitue, tomate, sauce fromagère</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/The%20beast.glb">
@@ -365,15 +443,18 @@
                         </div>
                         <p class="desc">Effiloché de veau cuit pendant 7 heures, oignons caramélisés, sauce au poivre, sauce maison, champignons grillés</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- PÂTES -->
-            <div class="menu-section">
+            <div class="menu-section" data-category="pates">
                 <h2 class="section-title"><span>🍝 LES PÂTES</span></h2>
                 <div class="menu-grid">
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20alfredo.glb">
@@ -383,9 +464,12 @@
                         </div>
                         <p class="desc">Pâtes au poulet et fumé de dinde, sauce blanche</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20bolognaise%20.glb">
@@ -395,9 +479,12 @@
                         </div>
                         <p class="desc">Pâtes al dente, sauce bolognaise maison, viande hachée, herbes et tomates fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20pasta%20crevettes%20.glb">
@@ -407,9 +494,12 @@
                         </div>
                         <p class="desc">Pâtes al dente, crevettes sautées, touche de citron, herbes fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20pasta%20saumon.glb">
@@ -419,15 +509,18 @@
                         </div>
                         <p class="desc">Pâtes al dente, saumon fumé ou frais, sauce crémeuse, citron et herbes fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                        <div class="btn-group">
+                            <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                            <button class="btn-ar" data-ar-source=""><i class="fas fa-vr-cardboard"></i> AR Quick Look 📱</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- BOISSONS SANS ALCOOL -->
-            <div class="menu-section">
+            <!-- BOISSONES -->
+            <div class="menu-section" data-category="boissons">
                 <h2 class="section-title"><span>🍹 VIBE'S MOCKTAIL</span></h2>
                 <div class="menu-grid simple-list">
                     <div class="menu-item"><div class="item-header"><h3>Vice City</h3><span class="price">550 DA</span></div></div>
@@ -436,9 +529,7 @@
                     <div class="menu-item"><div class="item-header"><h3>Sunrise</h3><span class="price">600 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Very Berry</h3><span class="price">750 DA</span></div></div>
                 </div>
-            </div>
 
-            <div class="menu-section">
                 <h2 class="section-title"><span>🍸 MOJITO</span></h2>
                 <div class="menu-grid simple-list">
                     <div class="menu-item"><div class="item-header"><h3>Mojito Virgin</h3><span class="price">500 DA</span></div></div>
@@ -447,27 +538,31 @@
                     <div class="menu-item"><div class="item-header"><h3>Mojito Blue Eyes</h3><span class="price">550 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Mojito Brésilien</h3><span class="price">600 DA</span></div></div>
                 </div>
-            </div>
 
-            <div class="menu-section">
                 <h2 class="section-title"><span>🍹 COCKTAILS</span></h2>
                 <div class="menu-grid simple-list">
                     <div class="menu-item"><div class="item-header"><h3>Cocktail de Fruits</h3><span class="price">700 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Cocktail Vibe</h3><span class="price">700 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Healthy</h3><span class="price">700 DA</span></div></div>
                 </div>
-            </div>
 
-            <div class="menu-section">
                 <h2 class="section-title"><span>☕ CAFÉ NOIR</span></h2>
                 <div class="menu-grid simple-list">
                     <div class="menu-item"><div class="item-header"><h3>Espresso</h3><span class="price">250 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Espresso Double</h3><span class="price">350 DA</span></div></div>
                     <div class="menu-item"><div class="item-header"><h3>Americano</h3><span class="price">350 DA</span></div></div>
                 </div>
+
+                <h2 class="section-title"><span>🥤 EAUX & SOFTS</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Eau Minérale (Petite)</h3><span class="price">100 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Eau Gazeuse (Petite)</h3><span class="price">150 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Canette Soft</h3><span class="price">200 DA</span></div></div>
+                </div>
             </div>
 
-            <div class="menu-section">
+            <!-- DESSERTS -->
+            <div class="menu-section" data-category="desserts">
                 <h2 class="section-title"><span>🍰 DESSERT</span></h2>
                 <div class="menu-grid simple-list">
                     <div class="menu-item"><div class="item-header"><h3>Tiramisu</h3><span class="price">500 DA</span></div></div>
@@ -476,23 +571,13 @@
                     <div class="menu-item"><div class="item-header"><h3>Flan Maison</h3><span class="price">400 DA</span></div></div>
                 </div>
             </div>
-
-            <div class="menu-section">
-                <h2 class="section-title"><span>🥤 EAUX & SOFTS</span></h2>
-                <div class="menu-grid simple-list">
-                    <div class="menu-item"><div class="item-header"><h3>Eau Minérale (Petite)</h3><span class="price">100 DA</span></div></div>
-                    <div class="menu-item"><div class="item-header"><h3>Eau Gazeuse (Petite)</h3><span class="price">150 DA</span></div></div>
-                    <div class="menu-item"><div class="item-header"><h3>Canette Soft</h3><span class="price">200 DA</span></div></div>
-                </div>
-            </div>
         </div>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <h2>vibe <span>bistrot</span></h2>
-                <p>Oran, Algérie</p>
+                <img src="vibe.PNG" alt="Vibe Bistrot" class="footer-logo-img">
             </div>
             <div class="footer-social">
                 <a href="https://instagram.com/vibe.bistrot" target="_blank"><i class="fab fa-instagram"></i></a>
