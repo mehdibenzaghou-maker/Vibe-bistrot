@@ -64,9 +64,12 @@
                         </div>
                         <p class="desc">Laitue, Tomates, Cerises, Oignons rouges, Olives noires, Maïs, Sauce vinaigrette</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-crudites" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-crudites', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-crudites')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Tono.glb">
@@ -76,9 +79,12 @@
                         </div>
                         <p class="desc">Thon, Crème mayonnaise, Cornichons, Tomates, Crème balsamique</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-tono" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-tono', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-tono')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Ce%CC%81sar%20vibe.glb">
@@ -88,9 +94,12 @@
                         </div>
                         <p class="desc">Poulet crispy, Tomates cerises, Laitue, Croûtons, Sauce maison, Parmesan</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-crispy" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-crispy', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-crispy')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Capresse.glb">
@@ -100,9 +109,12 @@
                         </div>
                         <p class="desc">Tomate, Mozzarella, Sauce pesto, Basilic</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-capresse" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-capresse', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-capresse')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burata%20vibe.glb">
@@ -112,9 +124,12 @@
                         </div>
                         <p class="desc">Burrata, Laitue, Tomates cerises, Fruits secs, Fruits de saison, Sauce pesto au balsamic frais</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-burrata" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-burrata', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-burrata')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,9 +150,12 @@
                         </div>
                         <p class="desc">Délicieux boureks maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-bourek" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-bourek', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-bourek')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item">
@@ -155,9 +173,12 @@
                         </div>
                         <p class="desc">Omelette préparée selon votre choix</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-omelette" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-omelette', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-omelette')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
@@ -167,9 +188,12 @@
                         </div>
                         <p class="desc">Gratin de poulet gratiné au fromage</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-gratin-poulet" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-gratin-poulet', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-gratin-poulet')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Camemvibe.glb">
@@ -179,9 +203,12 @@
                         </div>
                         <p class="desc">Camembert pané maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-camembert" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-camembert', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-camembert')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
@@ -191,9 +218,12 @@
                         </div>
                         <p class="desc">Gratin aux fruits de mer</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-fisherman" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-fisherman', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-fisherman')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,9 +244,12 @@
                         </div>
                         <p class="desc">Suprême de poulet cuisiné façon cordon bleu</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-frenchy" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-frenchy', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-frenchy')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Janivibe.glb">
@@ -226,9 +259,12 @@
                         </div>
                         <p class="desc">Suprême de poulet mariné au curry, cuisine façon indienne</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-jaintou" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-jaintou', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-jaintou')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chick%20Farci%20.glb">
@@ -238,9 +274,12 @@
                         </div>
                         <p class="desc">Poulet farci à la viande hachée et duxelle de champignons</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-chickfarci" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-chickfarci', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-chickfarci')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/1000%20et%20Une%20Escalope.glb">
@@ -250,9 +289,12 @@
                         </div>
                         <p class="desc">Suprême de poulet aux choix épices, pané ou à la crème</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-escalope" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-escalope', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-escalope')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Cuisse%20du%20Che%CC%81rif.glb">
@@ -262,9 +304,12 @@
                         </div>
                         <p class="desc">Cuisse désossée marinée grillée façon USA, nappée de sauce barbecue maison</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-cuisse" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-cuisse', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-cuisse')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,9 +330,12 @@
                         </div>
                         <p class="desc">Émincés de viande au jus corsé réduit et aux champignons frais</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-saute" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-saute', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-saute')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item" id="maos-ribs-placeholder">
@@ -306,9 +354,12 @@
                         </div>
                         <p class="desc">Jarret de veau fondant, nappé d'une sauce brune intense, accompagné de pommes de terre confites</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-jarret" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-jarret', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-jarret')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Grivibe.glb">
@@ -318,9 +369,12 @@
                         </div>
                         <p class="desc">Grillades fraîches selon l'arrivage du jour</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-grillades" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-grillades', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-grillades')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -341,9 +395,12 @@
                         </div>
                         <p class="desc">Suprême de poulet mariné et grillé, sauce Chef Cat, laitue, tomate tranchée</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-chickchic" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-chickchic', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-chickchic')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20elvis.glb">
@@ -353,9 +410,12 @@
                         </div>
                         <p class="desc">Steak haché, double cheese, sauce Presley, salade iceberg, tomate, pickles</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-elvis" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-elvis', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-elvis')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Forevibe.glb">
@@ -365,9 +425,12 @@
                         </div>
                         <p class="desc">Steak haché, double cheese, champignons, pignons caramélisés</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-forestier" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-forestier', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-forestier')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item">
@@ -396,9 +459,12 @@
                         </div>
                         <p class="desc">Suprême de poulet grillé et caramélisé, sauce maison, frites, laitue, tomate, sauce fromagère</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-alpin" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-alpin', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-alpin')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/The%20beast.glb">
@@ -408,9 +474,12 @@
                         </div>
                         <p class="desc">Effiloché de veau cuit pendant 7 heures, oignons caramélisés, sauce au poivre, sauce maison, champignons grillés</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-beast" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-beast', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-beast')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -431,9 +500,12 @@
                         </div>
                         <p class="desc">Pâtes au poulet et fumé de dinde, sauce blanche</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-alfredo" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-alfredo', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-alfredo')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Bolovibe.glb">
@@ -443,9 +515,12 @@
                         </div>
                         <p class="desc">Pâtes al dente, sauce bolognaise maison, viande hachée, herbes et tomates fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-bologna" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-bologna', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-bologna')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crevibe.glb">
@@ -455,9 +530,12 @@
                         </div>
                         <p class="desc">Pâtes al dente, crevettes sautées, touche de citron, herbes fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-shrimp" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-shrimp', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-shrimp')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
 
                     <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Sauvibe.glb">
@@ -467,9 +545,12 @@
                         </div>
                         <p class="desc">Pâtes al dente, saumon fumé ou frais, sauce crémeuse, citron et herbes fraîches</p>
                         <div class="model-container" style="display: none;">
-                            <model-viewer src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;"></model-viewer>
+                            <model-viewer id="model-saumon" src="" alt="Modèle 3D du plat" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="0.5" exposure="1.2" style="width:100%; height:250px; background: #1a3a2a;" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
                         </div>
-                        <button class="btn-table"><i class="fas fa-eye"></i> voir le plat à table</button>
+                        <div class="button-group">
+                            <button class="btn-table" onclick="loadModel('model-saumon', this)"><i class="fas fa-eye"></i> voir le plat 🍽️</button>
+                            <button class="btn-ar" onclick="activateAR('model-saumon')"><i class="fas fa-vr-cardboard"></i> voir à table</button>
+                        </div>
                     </div>
                 </div>
             </div>
