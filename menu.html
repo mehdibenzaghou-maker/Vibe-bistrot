@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Contact | Vibe Bistrot</title>
+    <title>Menu | Vibe Bistrot</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
     <header>
@@ -17,8 +18,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="burger">
                 <i class="fas fa-bars"></i>
@@ -27,44 +28,462 @@
     </header>
 
     <main>
-        <div class="contact-header">
-            <h1>Nous trouver</h1>
-            <p>Venez vivre l'expérience Vibe Bistrot</p>
+        <div class="menu-header">
+            <h1>Notre Carte</h1>
+            <p>Découvrez nos délicieuses créations</p>
         </div>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Adresse</h3>
-                    <p>06 BD WAHRANI BOUMEDIENE<br>Oran 3100, Algérie</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Téléphone</h3>
-                    <p><a href="tel:0770696270">0770 69 62 70</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <p><a href="https://instagram.com/vibe.bistrot" target="_blank">@vibe.bistrot</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="far fa-clock"></i>
-                    <h3>Horaires</h3>
-                    <p>Ouvert tous les jours<br>11h00 - 23h00</p>
+        <div class="menu-container">
+            <!-- ENTRÉES FROIDES -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🥗 ENTRÉES FROIDES</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Crudite%CC%81s.glb">
+                        <div class="item-header">
+                            <h3>Salade Crudités</h3>
+                            <span class="price">500 DA</span>
+                        </div>
+                        <p class="desc">Laitue, Tomates, Cerises, Oignons rouges, Olives noires, Maïs, Sauce vinaigrette</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Tono.glb">
+                        <div class="item-header">
+                            <h3>Salade Tono</h3>
+                            <span class="price">800 DA</span>
+                        </div>
+                        <p class="desc">Thon, Crème mayonnaise, Cornichons, Tomates, Crème balsamique</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Ce%CC%81sar%20vibe.glb">
+                        <div class="item-header">
+                            <h3>Crispy Salad</h3>
+                            <span class="price">900 DA</span>
+                        </div>
+                        <p class="desc">Poulet crispy, Tomates cerises, Laitue, Croûtons, Sauce maison, Parmesan</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Capresse.glb">
+                        <div class="item-header">
+                            <h3>La Capresse</h3>
+                            <span class="price">950 DA</span>
+                        </div>
+                        <p class="desc">Tomate, Mozzarella, Sauce pesto, Basilic</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burrata%20Vibe.glb">
+                        <div class="item-header">
+                            <h3>Burrata Vibe</h3>
+                            <span class="price">1250 DA</span>
+                        </div>
+                        <p class="desc">Burrata, Laitue, Tomates cerises, Fruits secs, Fruits de saison, Sauce pesto au balsamic frais</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="contact-map">
-                <iframe 
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.6415,35.6969,-0.6375,35.6999&layer=mapnik&marker=35.6984,-0.6395" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0; border-radius: 20px;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+            <!-- ENTRÉES CHAUDES -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🔥 ENTRÉES CHAUDES</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20bourek.glb">
+                        <div class="item-header">
+                            <h3>Bourek x2</h3>
+                            <span class="price">400 DA</span>
+                        </div>
+                        <p class="desc">Délicieux boureks maison</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Potage du Jour</h3>
+                            <span class="price">450 DA</span>
+                        </div>
+                        <p class="desc">Soupe maison selon l'inspiration du chef</p>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Omelette%20vibe.glb">
+                        <div class="item-header">
+                            <h3>Omelette au Choix</h3>
+                            <span class="price">650 DA</span>
+                        </div>
+                        <p class="desc">Omelette préparée selon votre choix</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
+                        <div class="item-header">
+                            <h3>Gratin de Poulet</h3>
+                            <span class="price">750 DA</span>
+                        </div>
+                        <p class="desc">Gratin de poulet gratiné au fromage</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20camembert%20pane.glb">
+                        <div class="item-header">
+                            <h3>Le Camembert du Patron</h3>
+                            <span class="price">900 DA</span>
+                        </div>
+                        <p class="desc">Camembert pané maison</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20gratin.glb">
+                        <div class="item-header">
+                            <h3>Gratin Fisherman</h3>
+                            <span class="price">1400 DA</span>
+                        </div>
+                        <p class="desc">Gratin aux fruits de mer</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATS POULET -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍗 PLATS – POULET</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20frenchy.glb">
+                        <div class="item-header">
+                            <h3>Le Frenchy</h3>
+                            <span class="price">1600 DA</span>
+                        </div>
+                        <p class="desc">Suprême de poulet cuisiné façon cordon bleu</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20Jaintou.glb">
+                        <div class="item-header">
+                            <h3>Le Jaintou</h3>
+                            <span class="price">1650 DA</span>
+                        </div>
+                        <p class="desc">Suprême de poulet mariné au curry, cuisine façon indienne</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chick%20Farci%20.glb">
+                        <div class="item-header">
+                            <h3>Chick Farci</h3>
+                            <span class="price">1650 DA</span>
+                        </div>
+                        <p class="desc">Poulet farci à la viande hachée et duxelle de champignons</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/1000%20et%20Une%20Escalope.glb">
+                        <div class="item-header">
+                            <h3>1000 et Une Escalope</h3>
+                            <span class="price">1700 DA</span>
+                        </div>
+                        <p class="desc">Suprême de poulet aux choix épices, pané ou à la crème</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/La%20Cuisse%20du%20Che%CC%81rif.glb">
+                        <div class="item-header">
+                            <h3>La Cuisse du chérif</h3>
+                            <span class="price">1800 DA</span>
+                        </div>
+                        <p class="desc">Cuisse désossée marinée grillée façon USA, nappée de sauce barbecue maison</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLATS VIANDES -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🥩 LES PLATS VIANDES</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Le%20Saute%CC%81.glb">
+                        <div class="item-header">
+                            <h3>Le Sauté</h3>
+                            <span class="price">1750 DA</span>
+                        </div>
+                        <p class="desc">Émincés de viande au jus corsé réduit et aux champignons frais</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item" id="maos-ribs-placeholder">
+                        <div class="item-header">
+                            <h3>Mao's Ribs</h3>
+                            <span class="price">1950 DA</span>
+                        </div>
+                        <p class="desc">Médallions de veau grillés à la façon asiatique</p>
+                        <!-- Emplacement réservé pour le GLB de Mao's Ribs -->
+                        <div class="glb-placeholder-note">🔜 Modèle 3D bientôt disponible</div>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Jarret%20en%20Fusion.glb">
+                        <div class="item-header">
+                            <h3>Jarret en Fusion</h3>
+                            <span class="price">2200 DA</span>
+                        </div>
+                        <p class="desc">Jarret de veau fondant, nappé d'une sauce brune intense, accompagné de pommes de terre confites</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Grillades%20du%20Jour.glb">
+                        <div class="item-header">
+                            <h3>Grillades du Jour</h3>
+                            <span class="price">★</span>
+                        </div>
+                        <p class="desc">Grillades fraîches selon l'arrivage du jour</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BURGERS -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍔 BURGERS</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chick%20chic.glb">
+                        <div class="item-header">
+                            <h3>Le Chick Chic</h3>
+                            <span class="price">750 DA</span>
+                        </div>
+                        <p class="desc">Suprême de poulet mariné et grillé, sauce Chef Cat, laitue, tomate tranchée</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20elvis.glb">
+                        <div class="item-header">
+                            <h3>Elvis</h3>
+                            <span class="price">850 DA</span>
+                        </div>
+                        <p class="desc">Steak haché, double cheese, sauce Presley, salade iceberg, tomate, pickles</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20forestier.glb">
+                        <div class="item-header">
+                            <h3>Forestier</h3>
+                            <span class="price">900 DA</span>
+                        </div>
+                        <p class="desc">Steak haché, double cheese, champignons, pignons caramélisés</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Portion Frites</h3>
+                            <span class="price">200 DA</span>
+                        </div>
+                        <p class="desc">Portion de frites maison</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SANDWICHS -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🥪 SANDWICHS</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Alpin.glb">
+                        <div class="item-header">
+                            <h3>SANDWICH ALPIN</h3>
+                            <span class="price">950 DA</span>
+                        </div>
+                        <p class="desc">Suprême de poulet grillé et caramélisé, sauce maison, frites, laitue, tomate, sauce fromagère</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/The%20beast.glb">
+                        <div class="item-header">
+                            <h3>THE BEAST</h3>
+                            <span class="price">1450 DA</span>
+                        </div>
+                        <p class="desc">Effiloché de veau cuit pendant 7 heures, oignons caramélisés, sauce au poivre, sauce maison, champignons grillés</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PÂTES -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍝 LES PÂTES</span></h2>
+                <div class="menu-grid">
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20alfredo.glb">
+                        <div class="item-header">
+                            <h3>Alfredo</h3>
+                            <span class="price">1400 DA</span>
+                        </div>
+                        <p class="desc">Pâtes au poulet et fumé de dinde, sauce blanche</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20bolognaise%20.glb">
+                        <div class="item-header">
+                            <h3>Bologna</h3>
+                            <span class="price">1500 DA</span>
+                        </div>
+                        <p class="desc">Pâtes al dente, sauce bolognaise maison, viande hachée, herbes et tomates fraîches</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20pasta%20crevettes%20.glb">
+                        <div class="item-header">
+                            <h3>Shrimp Pasta</h3>
+                            <span class="price">1600 DA</span>
+                        </div>
+                        <p class="desc">Pâtes al dente, crevettes sautées, touche de citron, herbes fraîches</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+
+                    <div class="menu-item has-3d" data-glb="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Vibe%20pasta%20saumon.glb">
+                        <div class="item-header">
+                            <h3>Saumon</h3>
+                            <span class="price">1900 DA</span>
+                        </div>
+                        <p class="desc">Pâtes al dente, saumon fumé ou frais, sauce crémeuse, citron et herbes fraîches</p>
+                        <div class="model-container" style="display: none;">
+                            <model-viewer src="" alt="Modèle 3D du plat" auto-rotate camera-controls environment-image="neutral" shadow-intensity="1" style="width:100%; height:250px;"></model-viewer>
+                        </div>
+                        <button class="btn-3d"><i class="fas fa-utensils"></i> montrez le plat 🍽️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOISSONS SANS ALCOOL -->
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍹 VIBE'S MOCKTAIL</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Vice City</h3><span class="price">550 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Tropi Pop</h3><span class="price">600 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Sunflower</h3><span class="price">600 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Sunrise</h3><span class="price">600 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Very Berry</h3><span class="price">750 DA</span></div></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍸 MOJITO</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Mojito Virgin</h3><span class="price">500 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Mojito Classic</h3><span class="price">550 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Mojito Passion Fruit</h3><span class="price">550 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Mojito Blue Eyes</h3><span class="price">550 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Mojito Brésilien</h3><span class="price">600 DA</span></div></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍹 COCKTAILS</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Cocktail de Fruits</h3><span class="price">700 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Cocktail Vibe</h3><span class="price">700 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Healthy</h3><span class="price">700 DA</span></div></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="section-title"><span>☕ CAFÉ NOIR</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Espresso</h3><span class="price">250 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Espresso Double</h3><span class="price">350 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Americano</h3><span class="price">350 DA</span></div></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="section-title"><span>🍰 DESSERT</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Tiramisu</h3><span class="price">500 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Mousse au Chocolat</h3><span class="price">500 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Crème Brûlée</h3><span class="price">500 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Flan Maison</h3><span class="price">400 DA</span></div></div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h2 class="section-title"><span>🥤 EAUX & SOFTS</span></h2>
+                <div class="menu-grid simple-list">
+                    <div class="menu-item"><div class="item-header"><h3>Eau Minérale (Petite)</h3><span class="price">100 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Eau Gazeuse (Petite)</h3><span class="price">150 DA</span></div></div>
+                    <div class="menu-item"><div class="item-header"><h3>Canette Soft</h3><span class="price">200 DA</span></div></div>
+                </div>
             </div>
         </div>
     </main>
