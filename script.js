@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
     
-    if (burger) {
+    if (burger && navLinks) {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         menuSections.forEach(section => {
             const sectionCategory = section.getAttribute('data-category');
             if (category === 'all' || sectionCategory === category) {
-                section.classList.remove('hidden');
+                section.classList.add('active-section');
                 section.style.animation = 'fadeInUp 0.5s ease';
             } else {
-                section.classList.add('hidden');
+                section.classList.remove('active-section');
             }
         });
     }
@@ -40,35 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const category = btn.getAttribute('data-category');
             filterSections(category);
         });
-    });
-    
-    // ========== "VOIR LE PLAT À TABLE" BUTTON ==========
-    const menuItems = document.querySelectorAll('.menu-item.has-3d');
-    
-    menuItems.forEach(item => {
-        const tableButton = item.querySelector('.btn-table');
-        const modelContainer = item.querySelector('.model-container');
-        const modelViewer = modelContainer ? modelContainer.querySelector('model-viewer') : null;
-        const glbUrl = item.getAttribute('data-glb');
-        
-        if (tableButton && modelContainer && modelViewer && glbUrl) {
-            modelContainer.style.display = 'none';
-            
-            tableButton.addEventListener('click', () => {
-                if (modelContainer.style.display === 'none') {
-                    if (!modelViewer.src) {
-                        modelViewer.src = glbUrl;
-                    }
-                    modelContainer.style.display = 'block';
-                    tableButton.innerHTML = '<i class="fas fa-eye-slash"></i> cacher le plat';
-                    tableButton.style.background = 'linear-gradient(135deg, #D4A373, #b87a4a)';
-                } else {
-                    modelContainer.style.display = 'none';
-                    tableButton.innerHTML = '<i class="fas fa-eye"></i> voir le plat à table';
-                    tableButton.style.background = '';
-                }
-            });
-        }
     });
     
     // ========== ANIMATION ON SCROLL ==========
@@ -87,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.menu-item, .feature-card, .info-card').forEach(item => {
+    document.querySelectorAll('.dish-card, .feature-card, .info-card').forEach(item => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
         item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -100,15 +71,77 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         yearElement.innerHTML = `&copy; ${currentYear} Vibe Bistrot - Tous droits réservés`;
     }
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
 });
+
+// ============================================
+// CHARGEMENT MANUEL DES MODÈLES 3D
+// ============================================
+window.loadModel = function(modelId, button) {
+    const modelViewer = document.getElementById(modelId);
+    const arButtonId = 'ar-' + modelId.replace('model-', '');
+    const arButton = document.getElementById(arButtonId);
+    const indicator = document.getElementById('indicator-' + modelId.replace('model-', ''));
+    
+    if (!modelViewer) return;
+    
+    button.style.display = 'none';
+    
+    if (indicator) {
+        indicator.textContent = '⏳ Chargement en cours...';
+        indicator.classList.add('visible');
+    }
+    
+    const dataSrc = modelViewer.getAttribute('data-src');
+    
+    if (dataSrc) {
+        modelViewer.setAttribute('src', dataSrc);
+        modelViewer.classList.add('model-loading');
+        
+        modelViewer.addEventListener('load', function onLoad() {
+            modelViewer.classList.remove('model-loading');
+            modelViewer.classList.add('model-loaded');
+            
+            if (arButton) {
+                arButton.style.display = 'inline-flex';
+            }
+            
+            if (indicator) {
+                indicator.textContent = '✅ Modèle chargé';
+                setTimeout(() => {
+                    indicator.classList.remove('visible');
+                }, 2000);
+            }
+            
+            modelViewer.removeEventListener('load', onLoad);
+        }, { once: true });
+        
+        modelViewer.addEventListener('error', function onError() {
+            modelViewer.classList.remove('model-loading');
+            
+            if (indicator) {
+                indicator.textContent = '❌ Erreur de chargement';
+                setTimeout(() => {
+                    indicator.classList.remove('visible');
+                }, 2000);
+            }
+            
+            button.style.display = 'inline-flex';
+            
+            modelViewer.removeEventListener('error', onError);
+        }, { once: true });
+    }
+};
+
+// ============================================
+// FONCTION AR
+// ============================================
+window.activateAR = function(modelId) {
+    const modelViewer = document.getElementById(modelId);
+    if (!modelViewer) return;
+    
+    try {
+        modelViewer.activateAR();
+    } catch (e) {
+        console.log('AR non disponible sur ce navigateur');
+    }
+};
