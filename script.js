@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionCategory = section.getAttribute('data-category');
             if (category === 'all' || sectionCategory === category) {
                 section.classList.remove('hidden');
-                // Add animation
                 section.style.animation = 'fadeInUp 0.5s ease';
             } else {
                 section.classList.add('hidden');
@@ -36,64 +35,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons
             tabBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             btn.classList.add('active');
-            // Filter sections
             const category = btn.getAttribute('data-category');
             filterSections(category);
         });
     });
     
-    // ========== 3D MODEL VIEWER TOGGLE ==========
+    // ========== "VOIR LE PLAT À TABLE" BUTTON ==========
     const menuItems = document.querySelectorAll('.menu-item.has-3d');
     
     menuItems.forEach(item => {
-        const button3d = item.querySelector('.btn-3d');
-        const buttonAr = item.querySelector('.btn-ar');
+        const tableButton = item.querySelector('.btn-table');
         const modelContainer = item.querySelector('.model-container');
         const modelViewer = modelContainer ? modelContainer.querySelector('model-viewer') : null;
         const glbUrl = item.getAttribute('data-glb');
         
-        if (button3d && modelContainer && modelViewer && glbUrl) {
-            // Initially hide the model container
+        if (tableButton && modelContainer && modelViewer && glbUrl) {
             modelContainer.style.display = 'none';
             
-            // 3D View Button
-            button3d.addEventListener('click', () => {
+            tableButton.addEventListener('click', () => {
                 if (modelContainer.style.display === 'none') {
                     if (!modelViewer.src) {
                         modelViewer.src = glbUrl;
                     }
                     modelContainer.style.display = 'block';
-                    button3d.innerHTML = '<i class="fas fa-eye-slash"></i> cacher le plat 🙈';
-                    button3d.style.backgroundColor = '#D4A373';
+                    tableButton.innerHTML = '<i class="fas fa-eye-slash"></i> cacher le plat';
+                    tableButton.style.background = 'linear-gradient(135deg, #D4A373, #b87a4a)';
                 } else {
                     modelContainer.style.display = 'none';
-                    button3d.innerHTML = '<i class="fas fa-utensils"></i> montrez le plat 🍽️';
-                    button3d.style.backgroundColor = '';
+                    tableButton.innerHTML = '<i class="fas fa-eye"></i> voir le plat à table';
+                    tableButton.style.background = '';
                 }
             });
-            
-            // AR Quick Look Button
-            if (buttonAr) {
-                buttonAr.addEventListener('click', () => {
-                    // For AR Quick Look on iOS
-                    if (modelViewer && glbUrl) {
-                        // Method 1: Use model-viewer's AR capabilities
-                        modelViewer.src = glbUrl;
-                        modelViewer.activateAR();
-                        
-                        // Method 2: Fallback - open in USDZ if available
-                        // Show notification
-                        buttonAr.innerHTML = '<i class="fas fa-vr-cardboard"></i> Lancement AR... 📱';
-                        setTimeout(() => {
-                            buttonAr.innerHTML = '<i class="fas fa-vr-cardboard"></i> AR Quick Look 📱';
-                        }, 2000);
-                    }
-                });
-            }
         }
     });
     
