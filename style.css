@@ -132,6 +132,7 @@ nav {
     opacity: 0.95;
 }
 
+/* Buttons */
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 12px 30px;
@@ -163,6 +164,25 @@ nav {
     background-color: var(--vibe-gold);
     color: var(--vibe-dark);
     transform: translateY(-3px);
+}
+
+/* Section Divider */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.divider-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--vibe-green), transparent);
+}
+
+.divider-line.light {
+    background: linear-gradient(90deg, transparent, var(--vibe-gold), transparent);
 }
 
 /* Container */
@@ -249,10 +269,20 @@ nav {
     background: rgba(255,255,255,0.2);
 }
 
-.feature-card i {
-    font-size: 2.8rem;
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon i {
+    font-size: 2rem;
     color: var(--vibe-gold);
-    margin-bottom: 1rem;
 }
 
 .feature-card h3 {
@@ -271,8 +301,16 @@ nav {
 
 .menu-header h1 {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 800;
+}
+
+.header-decoration {
+    width: 80px;
+    height: 3px;
+    background: var(--vibe-gold);
+    margin: 1rem auto;
+    border-radius: 3px;
 }
 
 /* Category Tabs */
@@ -331,17 +369,44 @@ nav {
 .section-title {
     text-align: center;
     margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.section-title span {
+.title-decoration {
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, var(--vibe-green), var(--vibe-green-light));
-    color: white;
-    padding: 0.6rem 2rem;
-    border-radius: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-decoration i {
     font-size: 1.3rem;
-    font-weight: 600;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vibe-green-dark);
+    position: relative;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--vibe-gold);
+    border-radius: 3px;
 }
 
 .menu-grid {
@@ -404,19 +469,16 @@ model-viewer {
     background: linear-gradient(135deg, #1a3a2a, #0d2618);
 }
 
-.btn-group {
-    display: flex;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
-}
-
-.btn-3d, .btn-ar {
-    flex: 1;
-    padding: 10px;
+/* Table View Button */
+.btn-table {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--vibe-green), var(--vibe-green-light));
+    color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.3s ease;
     display: flex;
@@ -425,24 +487,9 @@ model-viewer {
     gap: 8px;
 }
 
-.btn-3d {
-    background-color: var(--vibe-green);
-    color: white;
-}
-
-.btn-3d:hover {
-    background-color: var(--vibe-green-light);
+.btn-table:hover {
     transform: scale(1.02);
-}
-
-.btn-ar {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-}
-
-.btn-ar:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(45, 106, 79, 0.4);
 }
 
 .simple-list .menu-item {
@@ -463,7 +510,7 @@ model-viewer {
 
 .contact-header h1 {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 800;
 }
 
@@ -493,10 +540,20 @@ model-viewer {
     transform: translateY(-5px);
 }
 
-.info-card i {
-    font-size: 2.5rem;
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(45, 106, 79, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.info-icon i {
+    font-size: 1.5rem;
     color: var(--vibe-green);
-    margin-bottom: 1rem;
 }
 
 .info-card h3 {
@@ -625,11 +682,20 @@ footer {
         font-size: 0.75rem;
     }
     
-    .btn-group {
-        flex-direction: column;
-    }
-    
     .logo-img {
         height: 40px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.4rem;
+    }
+    
+    .title-decoration {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .title-decoration i {
+        font-size: 1rem;
     }
 }
