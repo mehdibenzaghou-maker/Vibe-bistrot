@@ -1,15 +1,14 @@
-// Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
     
-    if (burger && navLinks) {
+    if (burger) {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
     }
     
-    // Close mobile menu when clicking on a link
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ========== CATEGORY FILTER SYSTEM ==========
+    // Category Filter System
     const tabBtns = document.querySelectorAll('.tab-btn');
     const menuSections = document.querySelectorAll('.menu-section');
     
@@ -25,10 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         menuSections.forEach(section => {
             const sectionCategory = section.getAttribute('data-category');
             if (category === 'all' || sectionCategory === category) {
-                section.classList.add('active-section');
-                section.style.animation = 'fadeInUp 0.5s ease';
+                section.classList.remove('hidden');
             } else {
-                section.classList.remove('active-section');
+                section.classList.add('hidden');
             }
         });
     }
@@ -42,7 +40,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ========== ANIMATION ON SCROLL ==========
+    // 3D Model Toggle
+    const menuItems = document.querySelectorAll('.menu-item.has-3d');
+    
+    menuItems.forEach(item => {
+        const tableButton = item.querySelector('.btn-table');
+        const modelContainer = item.querySelector('.model-container');
+        const modelViewer = modelContainer ? modelContainer.querySelector('model-viewer') : null;
+        const glbUrl = item.getAttribute('data-glb');
+        
+        if (tableButton && modelContainer && modelViewer && glbUrl) {
+            modelContainer.style.display = 'none';
+            
+            tableButton.addEventListener('click', () => {
+                if (modelContainer.style.display === 'none') {
+                    if (!modelViewer.src) {
+                        modelViewer.src = glbUrl;
+                    }
+                    modelContainer.style.display = 'block';
+                    tableButton.innerHTML = '<i class="fas fa-eye-slash"></i> cacher le plat';
+                } else {
+                    modelContainer.style.display = 'none';
+                    tableButton.innerHTML = '<i class="fas fa-eye"></i> voir le plat à table';
+                }
+            });
+        }
+    });
+    
+    // Animation on scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -58,90 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.dish-card, .feature-card, .info-card').forEach(item => {
+    document.querySelectorAll('.menu-item, .feature-card, .info-card').forEach(item => {
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
         item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(item);
     });
     
-    // Set current year in footer
+    // Current year in footer
     const yearElement = document.querySelector('.footer-bottom p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
         yearElement.innerHTML = `&copy; ${currentYear} Vibe Bistrot - Tous droits réservés`;
     }
 });
-
-// ============================================
-// CHARGEMENT MANUEL DES MODÈLES 3D
-// ============================================
-window.loadModel = function(modelId, button) {
-    const modelViewer = document.getElementById(modelId);
-    const arButtonId = 'ar-' + modelId.replace('model-', '');
-    const arButton = document.getElementById(arButtonId);
-    const indicator = document.getElementById('indicator-' + modelId.replace('model-', ''));
-    
-    if (!modelViewer) return;
-    
-    button.style.display = 'none';
-    
-    if (indicator) {
-        indicator.textContent = '⏳ Chargement en cours...';
-        indicator.classList.add('visible');
-    }
-    
-    const dataSrc = modelViewer.getAttribute('data-src');
-    
-    if (dataSrc) {
-        modelViewer.setAttribute('src', dataSrc);
-        modelViewer.classList.add('model-loading');
-        
-        modelViewer.addEventListener('load', function onLoad() {
-            modelViewer.classList.remove('model-loading');
-            modelViewer.classList.add('model-loaded');
-            
-            if (arButton) {
-                arButton.style.display = 'inline-flex';
-            }
-            
-            if (indicator) {
-                indicator.textContent = '✅ Modèle chargé';
-                setTimeout(() => {
-                    indicator.classList.remove('visible');
-                }, 2000);
-            }
-            
-            modelViewer.removeEventListener('load', onLoad);
-        }, { once: true });
-        
-        modelViewer.addEventListener('error', function onError() {
-            modelViewer.classList.remove('model-loading');
-            
-            if (indicator) {
-                indicator.textContent = '❌ Erreur de chargement';
-                setTimeout(() => {
-                    indicator.classList.remove('visible');
-                }, 2000);
-            }
-            
-            button.style.display = 'inline-flex';
-            
-            modelViewer.removeEventListener('error', onError);
-        }, { once: true });
-    }
-};
-
-// ============================================
-// FONCTION AR
-// ============================================
-window.activateAR = function(modelId) {
-    const modelViewer = document.getElementById(modelId);
-    if (!modelViewer) return;
-    
-    try {
-        modelViewer.activateAR();
-    } catch (e) {
-        console.log('AR non disponible sur ce navigateur');
-    }
-};
