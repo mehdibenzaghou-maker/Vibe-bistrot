@@ -95,7 +95,7 @@ nav {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600');
+    background: linear-gradient(135deg, rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/vibeberra.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
