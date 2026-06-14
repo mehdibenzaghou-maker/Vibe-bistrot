@@ -97,3 +97,56 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.innerHTML = `&copy; ${currentYear} Vibe Bistrot - Tous droits réservés`;
     }
 });
+
+/* ═══════════════════════════════════════════════════════
+   VIBE BISTROT — DESIGN UPGRADES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Intro removal ──────────────────────────────────── */
+setTimeout(function(){
+  var intro = document.getElementById('vibe-intro');
+  if(intro) intro.remove();
+}, 4800);
+
+/* ── Nav scroll effect ──────────────────────────────── */
+window.addEventListener('scroll', function(){
+  var header = document.querySelector('header');
+  if(header) header.classList.toggle('scrolled', window.scrollY > 60);
+}, {passive:true});
+
+/* ── Enhanced scroll reveal ─────────────────────────── */
+if('IntersectionObserver' in window){
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e, i){
+      if(e.isIntersecting){
+        setTimeout(function(){ e.target.classList.add('in'); }, i * 80);
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.08, rootMargin: '0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal-up').forEach(function(el){ revealObs.observe(el); });
+}
+
+/* ── Green cursor trail (desktop) ───────────────────── */
+if(!window.matchMedia('(hover:none)').matches){
+  var dots = [];
+  for(var i=0; i<5; i++){
+    var d = document.createElement('div');
+    d.className = 'cursor-dot';
+    var sz = 5 - i*0.7;
+    d.style.cssText = 'width:'+sz+'px;height:'+sz+'px;background:rgba(45,106,79,'+(0.5-i*0.08)+');transition:left '+(18+i*22)+'ms linear,top '+(18+i*22)+'ms linear;';
+    document.body.appendChild(d);
+    dots.push(d);
+  }
+  document.addEventListener('mousemove', function(e){
+    dots[0].style.left = e.clientX + 'px';
+    dots[0].style.top = e.clientY + 'px';
+  });
+  (function loop(){
+    for(var i=1;i<dots.length;i++){
+      dots[i].style.left = (parseFloat(dots[i-1].style.left)||0) + 'px';
+      dots[i].style.top = (parseFloat(dots[i-1].style.top)||0) + 'px';
+    }
+    requestAnimationFrame(loop);
+  })();
+}
